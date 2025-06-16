@@ -1,0 +1,8 @@
+exportar const Montamos = (propiedades) => {
+    const valor = Object.values(propiedades)
+
+    const componente = valor[0]
+    const elemento = valor[1]
+
+    componente(elemento)
+}

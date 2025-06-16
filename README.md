@@ -13,5 +13,5 @@ Vamos a salir a pasear en familia.
 En un lenguaje telegráfico sería:
 
 ```
-familia salir pasear vamos
+salir pasear ir familiar
 ```

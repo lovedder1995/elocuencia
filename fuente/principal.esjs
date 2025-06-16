@@ -1,0 +1,20 @@
+importar './estilo.css'
+importar { Montamos } desde './Montamos.esjs'
+importar { contador } desde './contador.esjs'
+
+document.querySelector('#aplicación').innerHTML = `
+    <div>
+        <a href="https://es.js.org" target="_blank">
+            <img src="https://es.js.org/assets/logo.png" class="logo vanilla esjs" alt="EsJS logo" />
+        </a>
+        <h1>Elocuencia con EsJS!</h1>
+        <div class="tarjeta">
+            <button id="contador" type="button"></button>
+        </div>
+    </div>
+`
+
+Montamos({
+  el: contador,
+  en_el_elemento: document.querySelector('#contador')
+})
