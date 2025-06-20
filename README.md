@@ -17,3 +17,86 @@ En un lenguaje telegráfico podría ser:
 ```
 vms psr en fam
 ```
+
+## Imprimir
+
+```js
+_.imprimimos({
+    _: "Hola hispanidad"
+})
+```
+
+```js
+_.imprimimos({
+    _: [
+        "Hola",
+        "hispanidad"
+    ]
+})
+```
+
+```js
+_.imprimimos({
+    _: "Hola hispanidad",
+    dejando_un: "rastro"
+})
+```
+
+## el tipo de ...
+
+```js
+// texto
+_.el({
+    _: "tipo",
+    de: "Hola hispanidad"
+})
+```
+
+```js
+// número
+_.el({
+    _: "tipo",
+    de: 10
+})
+```
+
+```js
+// lista
+_.el({
+    _: "tipo",
+    de: [
+        "Hola",
+        "hispanidad"
+    ]
+})
+```
+
+```js
+// verdadero
+_.el({
+    _: "tipo",
+    de: "Hola hispanidad",
+    es: "texto"
+})
+```
+
+```js
+// verdadero
+_.el({
+    _: "tipo",
+    de: 10,
+    es: "número"
+})
+```
+
+```js
+// verdadero
+_.el({
+    _: "tipo",
+    de: [
+        "Hola",
+        "hispanidad"
+    ],
+    es: "lista"
+})
+```

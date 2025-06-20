@@ -1,0 +1,16 @@
+importar el desde "./sintaxis/el.esjs"
+importar imprimimos desde "./sintaxis/imprimimos.esjs"
+
+const sintaxis = {}
+
+/******/
+/* el */
+/******/
+sintaxis.el = el
+
+/**************/
+/* imprimimos */
+/**************/
+sintaxis.imprimimos = imprimimos
+
+exportar default sintaxis

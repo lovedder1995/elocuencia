@@ -1,0 +1,117 @@
+importar el desde "./el.esjs"
+
+// En este bloque devolvemos una función: esta función.
+const imprimimos = ({
+    los: textos,
+    dejando_un_rastro,
+}) => {
+    // En esta función no devolvemos nada.
+
+    si (
+        // alguno de los textos,
+        // en realidad, no es un texto,
+        !textos.every((
+            texto,
+        ) => {
+            retornar (
+                el({
+                    _: "tipo",
+                    de_el: texto,
+                    es: "texto"
+                })
+                ||
+                el({
+                    _: "tipo",
+                    de_el: texto,
+                    es: "número"
+                })
+            )
+        })
+    ) {
+        // imprimimos el siguiente error:
+        consola.rastrear(
+            "Se está intentando imprimir algo que no es ni un texto ni un número.",
+        )
+
+        // Y no devolvemos nada.
+        retornar
+    }
+
+    si (
+        // se va a dejar un rastro,
+        dejando_un_rastro === verdadero
+    ) {
+        // imprimimos los textos dejando un rastro.
+        consola.rastrear(...textos)
+
+        // Y no devolvemos nada.
+        retornar
+    }
+
+    // En cualquier otro caso, imprimimos los textos.
+    consola.escribir(...textos)
+}
+
+exportar default (
+    oración,
+) => {
+    const valor = Object.values(oración)
+
+    // En esta función no devolvemos nada.
+
+    // Los textos son el valor 0 de la oración.
+    let textos = valor[0]
+
+    si (
+        el({
+            _: "tipo",
+            de_el: textos,
+            es: "lista"
+        })
+    ) {
+        // entonces los textos serán una lista de los valores de sí mismos.
+        textos = Object.values(textos)
+    }
+
+    si (
+        // los textos no son una lista,
+        !Array.isArray(textos)
+    ) {
+        // entonces los textos serán una lista de sí mismos como único elemento.
+        textos = [textos]
+    }
+
+    si (
+        // el valor 1 de la oración está establecido
+        valor[1] !== indefinido &&
+        valor[1] !== nulo
+        // es porque se quiere imprimir de alguna manera en particular,
+        // en ese caso, hacemos lo siguiente:
+    ) {
+        si (
+            // el valor 1 de la oración es «rastro»,
+            valor[1] === "rastro"
+        ) {
+            imprimimos({
+                los: textos,
+                dejando_un_rastro: verdadero
+            })
+
+            // Y no devolvemos nada.
+            retornar
+        }
+
+        // En cualquier otro caso, imprimimos el error:
+        consola.rastrear(
+            "Expresión mal formada. No está claro cómo se quiere imprimir.",
+        )
+
+        // Y no devolvemos nada.
+        retornar
+    }
+
+    // Y en cualquier otro caso, imprimimos los textos.
+    imprimimos({
+        los: textos
+    })
+}

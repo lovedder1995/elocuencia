@@ -1,0 +1,24 @@
+importar el_tipo_de from "./el_tipo_de.esjs"
+
+export default (
+    oración,
+) => {
+    const identificador = Object.keys(oración)
+    const valor = Object.values(oración)
+
+    si (valor[0] === "tipo") {
+        const elemento = valor[1]
+        const tipo = valor[2]
+
+        retornar el_tipo_de({
+            el: elemento,
+            es_de_un: tipo
+        })
+    }
+
+    // En cualquier otro caso, imprimimos el siguiente error:
+    consola.rastrear("Expresión desconocida.")
+
+    // Y no devolvemos nada.
+    retornar
+}

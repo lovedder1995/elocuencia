@@ -1,0 +1,5 @@
+importar _ desde "./elocuencia.esjs"
+
+_.imprimimos({
+    _: "Hola hispanidad"
+})

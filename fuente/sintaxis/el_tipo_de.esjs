@@ -1,0 +1,81 @@
+// En este bloque devolvemos una función: esta función.
+// el tipo de
+export default ({
+    el: elemento,
+    es_de_un: tipo
+}) => {
+    const tipos = [
+        "texto",
+        "número",
+        "lista"
+    ]
+
+    si (tipo !== indefinido && tipo !== nulo) {
+        si (!tipos.includes(tipo)) {
+            // imprimimos el siguiente error:
+            consola.rastrear(
+                "Se está intentando verificar un tipo desconocido.",
+            )
+
+            retornar
+        }
+    }
+
+    si (
+        // el tipo de el elemento es «texto»,
+        typeof elemento === "string"
+    ) {
+        si (tipo !== indefinido) {
+            si (tipo === "texto") {
+                retornar verdadero
+            }
+
+            si (tipo !== "texto") {
+                retornar falso
+            }
+        }
+
+        retornar "texto"
+    }
+
+    si (
+        // el tipo de el elemento es «número»,
+        typeof elemento === "number"
+    ) {
+        si (tipo !== indefinido) {
+            si (tipo === "número") {
+                retornar verdadero
+            }
+
+            si (tipo !== "número") {
+                retornar falso
+            }
+        }
+
+        retornar "número"
+    }
+
+    si (
+        // el tipo de el elemento es «lista»,
+        (
+            typeof elemento === "object" &&
+            elemento !== nulo
+        ) &&
+        (
+            elemento.constructor.name === "Object" ||
+            elemento.constructor.name === "Array"
+        )
+    ) {
+        si (tipo !== indefinido) {
+            si (tipo === "lista") {
+                retornar verdadero
+            }
+
+            si (tipo !== "lista") {
+                retornar falso
+            }
+        }
+
+        retornar "lista"
+    }
+}
