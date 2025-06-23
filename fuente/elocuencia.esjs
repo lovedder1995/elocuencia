@@ -1,12 +1,18 @@
-importar el desde "./sintaxis/el.esjs"
+importar el_tipo desde "./sintaxis/el_tipo.esjs"
+importar el_índice desde "./sintaxis/el_índice.esjs"
 importar imprimimos desde "./sintaxis/imprimimos.esjs"
 
 const sintaxis = {}
 
-/******/
-/* el */
-/******/
-sintaxis.el = el
+/***********/
+/* el tipo */
+/***********/
+sintaxis.el_tipo = el_tipo
+
+/*************/
+/* el índice */
+/*************/
+sintaxis.el_índice = el_índice
 
 /**************/
 /* imprimimos */

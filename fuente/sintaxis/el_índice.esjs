@@ -1,0 +1,41 @@
+importar el_tipo desde "./el_tipo.esjs"
+
+const el_índice = ({
+    del: elemento,
+}) => {
+    // En esta función devolvemos una lista.
+
+    si (
+        el_tipo({
+            del: elemento,
+            no_es: "lista"
+        })
+    ) {
+        // imprimimos el siguiente error:
+        consola.rastrear(
+            "El índice solo se puede obtener de una lista.",
+        )
+
+        // Y no devolvemos nada.
+        retornar
+    }
+
+    // En cualquier otro caso, devolvemos el índice.
+    retornar Object.keys(elemento)
+}
+
+exportar default (
+    oración,
+) => {
+    const valor = Object.values(oración)
+
+    // En esta función devolvemos una lista.
+
+    // El elemento es el valor 0 de la oración.
+    const elemento = valor[0]
+
+    // En cualquier caso,
+    retornar el_índice({
+        del: elemento,
+    })
+}

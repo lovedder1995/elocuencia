@@ -1,4 +1,4 @@
-importar el desde "./el.esjs"
+importar el_tipo desde "./el_tipo.esjs"
 
 // En este bloque devolvemos una función: esta función.
 const imprimimos = ({
@@ -6,36 +6,6 @@ const imprimimos = ({
     dejando_un_rastro,
 }) => {
     // En esta función no devolvemos nada.
-
-    si (
-        // alguno de los textos,
-        // en realidad, no es un texto,
-        !textos.every((
-            texto,
-        ) => {
-            retornar (
-                el({
-                    _: "tipo",
-                    de_el: texto,
-                    es: "texto"
-                })
-                ||
-                el({
-                    _: "tipo",
-                    de_el: texto,
-                    es: "número"
-                })
-            )
-        })
-    ) {
-        // imprimimos el siguiente error:
-        consola.rastrear(
-            "Se está intentando imprimir algo que no es ni un texto ni un número.",
-        )
-
-        // Y no devolvemos nada.
-        retornar
-    }
 
     si (
         // se va a dejar un rastro,
@@ -63,9 +33,8 @@ exportar default (
     let textos = valor[0]
 
     si (
-        el({
-            _: "tipo",
-            de_el: textos,
+        el_tipo({
+            de_los: textos,
             es: "lista"
         })
     ) {
@@ -74,8 +43,10 @@ exportar default (
     }
 
     si (
-        // los textos no son una lista,
-        !Array.isArray(textos)
+        el_tipo({
+            de_los: textos,
+            no_es: "lista"
+        })
     ) {
         // entonces los textos serán una lista de sí mismos como único elemento.
         textos = [textos]

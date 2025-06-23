@@ -46,35 +46,32 @@ _.imprimimos({
 
 ```js
 // texto
-_.el({
-    _: "tipo",
+_.el_tipo({
     de: "Hola hispanidad"
 })
 ```
 
 ```js
 // número
-_.el({
-    _: "tipo",
+_.el_tipo({
     de: 10
 })
 ```
 
 ```js
 // lista
-_.el({
-    _: "tipo",
-    de: [
-        "Hola",
-        "hispanidad"
+_.el_tipo({
+        de: [
+        "México",
+        "España",
+        "Argentina"
     ]
 })
 ```
 
 ```js
 // verdadero
-_.el({
-    _: "tipo",
+_.el_tipo({
     de: "Hola hispanidad",
     es: "texto"
 })
@@ -82,8 +79,7 @@ _.el({
 
 ```js
 // verdadero
-_.el({
-    _: "tipo",
+_.el_tipo({
     de: 10,
     es: "número"
 })
@@ -91,12 +87,64 @@ _.el({
 
 ```js
 // verdadero
-_.el({
-    _: "tipo",
+_.el_tipo({
     de: [
-        "Hola",
-        "hispanidad"
+        "México",
+        "España",
+        "Argentina"
     ],
     es: "lista"
+})
+```
+
+```js
+// falso
+_.el_tipo({
+    de: "Hola hispanidad",
+    no_es: "texto"
+})
+```
+
+```js
+// falso
+_.el_tipo({
+    de: 10,
+    no_es: "número"
+})
+```
+
+```js
+// falso
+_.el_tipo({
+    de: [
+        "México",
+        "España",
+        "Argentina"
+    ],
+    no_es: "lista"
+})
+```
+
+## el índice de
+
+```js
+// México, España, Argentina
+_.el_índice({
+    de: {
+        "México" : "es-MX",
+        "España": "es-ES",
+        "Argentina": "es-AR"
+    }
+})
+```
+
+```js
+// 0, 1, 2
+_.el_índice({
+    de: [
+        "México",
+        "España",
+        "Argentina"
+    ]
 })
 ```

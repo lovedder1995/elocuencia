@@ -1,8 +1,8 @@
 // En este bloque devolvemos una función: esta función.
-// el tipo de
-export default ({
-    el: elemento,
-    es_de_un: tipo
+const el_tipo = ({
+    del: elemento,
+    es_de_un: tipo,
+    o_no_es: se_quiere_saber_si_no_es
 }) => {
     const tipos = [
         "texto",
@@ -27,10 +27,18 @@ export default ({
     ) {
         si (tipo !== indefinido) {
             si (tipo === "texto") {
+                si (se_quiere_saber_si_no_es) {
+                    retornar falso
+                }
+
                 retornar verdadero
             }
 
             si (tipo !== "texto") {
+                si (se_quiere_saber_si_no_es) {
+                    retornar verdadero
+                }
+
                 retornar falso
             }
         }
@@ -44,10 +52,18 @@ export default ({
     ) {
         si (tipo !== indefinido) {
             si (tipo === "número") {
+                si (se_quiere_saber_si_no_es) {
+                    retornar falso
+                }
+
                 retornar verdadero
             }
 
             si (tipo !== "número") {
+                si (se_quiere_saber_si_no_es) {
+                    retornar verdadero
+                }
+
                 retornar falso
             }
         }
@@ -68,14 +84,45 @@ export default ({
     ) {
         si (tipo !== indefinido) {
             si (tipo === "lista") {
+                si (se_quiere_saber_si_no_es) {
+                    retornar falso
+                }
+
                 retornar verdadero
             }
 
             si (tipo !== "lista") {
+                si (se_quiere_saber_si_no_es) {
+                    retornar verdadero
+                }
+
                 retornar falso
             }
         }
 
         retornar "lista"
     }
+}
+
+exportar default (
+    oración,
+) => {
+    const identificador = Object.keys(oración)
+    const valor = Object.values(oración)
+
+    const elemento = valor[0]
+    const tipo = valor[1]
+    let se_quiere_saber_si_no_es = falso
+
+    si (identificador[1] !== indefinido) {
+        si (identificador[1].startsWith('no')) {
+            se_quiere_saber_si_no_es = verdadero
+        }
+    }
+
+    retornar el_tipo({
+        del: elemento,
+        es_de_un: tipo,
+        o_no_es: se_quiere_saber_si_no_es
+    })
 }
