@@ -125,7 +125,7 @@ _.el_tipo({
 })
 ```
 
-## el índice de
+## el índice de ...
 
 ```js
 // México, España, Argentina
@@ -145,6 +145,29 @@ _.el_índice({
         "México",
         "España",
         "Argentina"
+    ]
+})
+```
+
+## el número de ...
+
+```js
+// 3
+_.el_número({
+    de_países: [
+        "México",
+        "España",
+        "Argentina"
+    ]
+})
+```
+
+```js
+// 2
+_.el_número({
+    de_colores: [
+        "rojo",
+        "azul"
     ]
 })
 ```

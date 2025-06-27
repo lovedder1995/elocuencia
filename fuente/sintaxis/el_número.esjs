@@ -1,0 +1,40 @@
+importar el_tipo desde "./el_tipo.esjs"
+importar imprimimos desde "./imprimimos.esjs"
+
+const el_número = ({
+    de_elementos_en_la: lista,
+}) => {
+    // En esta función devolvemos un número.
+
+    si (
+        el_tipo({
+            de_la: lista,
+            no_es: "lista"
+        })
+    ) {
+        imprimimos({
+            _: "El número de elementos solo se puede obtener de una lista.",
+            dejando_un: "rastro"
+        })
+
+        // Y no devolvemos nada.
+        retornar
+    }
+
+    // En cualquier otro caso, devolvemos el número de elementos en la lista.
+    retornar lista.length
+}
+
+exportar default (
+    oración,
+) => {
+    const identificador = Object.keys(oración)
+    const valor = Object.values(oración)
+
+    // La lista es el valor 0 de la oración.
+    const lista = valor[0]
+
+    retornar el_número({
+        de_elementos_en_la: lista,
+    })
+}
