@@ -1,0 +1,32 @@
+// En este bloque devolvemos una función: esta función.
+const si_existe = ({
+    el: elemento
+}) => {
+    // En esta función devolvemos un dato lógico.
+
+    si (
+        // existe el elemento,
+        elemento !== indefinido &&
+        elemento !== nulo
+    ) {
+        // devolvemos una afirmación: sí existe el elemento.
+        retornar verdadero
+    }
+
+    // De lo contrario, devolvemos una negación: no existe el elemento.
+    retornar falso
+}
+
+exportar default (
+    oración
+) => {
+    const valor = Object.values(oración)
+
+    // El elemento es el valor 0 de la oración.
+    const elemento = valor[0]
+
+    // En cualquier caso
+    retornar si_existe({
+        el: elemento
+    })
+}

@@ -1,7 +1,9 @@
 importar el_índice desde "./sintaxis/el_índice.esjs"
 importar el_número desde "./sintaxis/el_número.esjs"
 importar el_tipo desde "./sintaxis/el_tipo.esjs"
+importar existe desde "./sintaxis/existe.esjs"
 importar imprimimos desde "./sintaxis/imprimimos.esjs"
+importar no_existe desde "./sintaxis/no_existe.esjs"
 
 const sintaxis = {}
 
@@ -20,9 +22,23 @@ sintaxis.el_número = el_número
 /***********/
 sintaxis.el_tipo = el_tipo
 
+/**********/
+/* existe */
+/**********/
+
+sintaxis.existe = existe
+sintaxis.existen = existe
+
 /**************/
 /* imprimimos */
 /**************/
 sintaxis.imprimimos = imprimimos
+
+/*************/
+/* no existe */
+/*************/
+
+sintaxis.no_existe = no_existe
+sintaxis.no_existen = no_existe
 
 exportar default sintaxis

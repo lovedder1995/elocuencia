@@ -171,3 +171,21 @@ _.el_número({
     ]
 })
 ```
+
+## existe o no existe el ...
+
+También en plural, «existen» o «no existen».
+
+```js
+// verdadero
+_.existe({
+    el: "texto"
+})
+```
+
+```js
+// verdadero
+_.no_existe({
+    porque_es: nulo
+})
+```
