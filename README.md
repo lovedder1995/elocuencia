@@ -61,7 +61,7 @@ _.el_tipo({
 ```js
 // lista
 _.el_tipo({
-        de: [
+    de: [
         "México",
         "España",
         "Argentina"
